@@ -108,7 +108,7 @@ ynh_use_logrotate --non-append
 # RESTORE CUSTOM SCRIPTS
 #=================================================
 ynh_script_progression --message="Restoring syncyunohost.sh script to /usr/local/bin/..." --weight=1
-install -b -o root -g root -m 0755 "$install_dir/conf/syncyunohost.sh" /usr/local/bin/syncyunohost.sh
+install -b -o root -g root -m 0755 "../conf/syncyunohost.sh" /usr/local/bin/syncyunohost.sh
 
 #=================================================
 # END OF SCRIPT
