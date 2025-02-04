@@ -115,7 +115,7 @@ fi
 #=================================================
 # COPY SCRIPT TO /usr/local/bin
 #=================================================
-ynh_script_progression --message="Copying user_management.sh to /usr/local/bin/..." --weight=1
+ynh_script_progression --message="Copying syncyunohost.sh to /usr/local/bin/..." --weight=1
 
 install -b -o root -g root -m 0755 "$install_dir/conf/syncyunohost.sh" /usr/local/bin/syncyunohost.sh
 #=================================================
