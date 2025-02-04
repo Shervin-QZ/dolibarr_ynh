@@ -32,7 +32,7 @@ ynh_backup --src_path="/etc/logrotate.d/$app"
 # BACKUP CUSTOM SCRIPTS
 #=================================================
 ynh_print_info --message="Backing up user_management.sh script from /usr/local/bin/..."
-ynh_backup --src_path="/usr/local/bin/user_management.sh"
+ynh_backup --src_path="/usr/local/bin/syncyunohost.sh"
 
 #=================================================
 # BACKUP THE MYSQL DATABASE
