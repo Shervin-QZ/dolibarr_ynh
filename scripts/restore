@@ -27,7 +27,20 @@ chmod 644 "$install_dir/htdocs/conf/conf.php"
 ynh_script_progression --message="Restoring the MySQL database..." --weight=1
 
 ynh_mysql_connect_as --user="$db_user" --password="$db_pwd" --database="$db_name" < ./db.sql
+#=================================================
+# COPY CUSTOM FILES TO DESTINATION
+#=================================================
+ynh_script_progression --message="Copying custom files to /htdocs/custom/..." --weight=1
 
+# Ensure the target directory exists
+mkdir -p "$install_dir/htdocs/custom"
+
+# Copy files
+cp -r ../sources/extra_files/app/syncyunohost/* "$install_dir/htdocs/custom/"
+
+# Set appropriate permissions
+chown -R "$app:www-data" "$install_dir/htdocs/custom"
+chmod -R 750 "$install_dir/htdocs/custom"
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
