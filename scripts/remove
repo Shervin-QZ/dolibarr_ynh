@@ -26,8 +26,8 @@ ynh_secure_remove --file="/etc/$app"
 #=================================================
 # REMOVE CUSTOM SCRIPTS
 #=================================================
-ynh_script_progression --message="Removing user_management.sh script from /usr/local/bin/..." --weight=1
-ynh_secure_remove --file="/usr/local/bin/user_management.sh"
+ynh_script_progression --message="Removing syncyunohost.sh script from /usr/local/bin/..." --weight=1
+ynh_secure_remove --file="/usr/local/bin/syncyunohost.sh"
 
 #=================================================
 # END OF SCRIPT
